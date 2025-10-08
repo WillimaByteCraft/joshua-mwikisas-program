@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrity - Teacher Excellence Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>INTEGRITY</h1>
+                <span>Recruitment Platform</span>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search by competency">
+                <button id="searchBtn">Search</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <h3>Filters</h3>
+                
+                <div class="filter-group">
+                    <h4>Specialties</h4>
+                    <div class="filter-options">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="english" checked>
+                            <span class="checkmark"></span>
+                            English
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="math" checked>
+                            <span class="checkmark"></span>
+                            Mathematics
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="addmath" checked>
+                            <span class="checkmark"></span>
+                            Additional Math
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="history" checked>
+                            <span class="checkmark"></span>
+                            History
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="civics" checked>
+                            <span class="checkmark"></span>
+                            Civic Education
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" value="computer" checked>
+                            <span class="checkmark"></span>
+                            Computer Studies
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Sort By</h4>
+                    <select id="sortSelect">
+                        <option value="competency">Competency (High to Low)</option>
+                        <option value="competency-asc">Competency (Low to High)</option>
+                        <option value="name">Name (A-Z)</option>
+                        <option value="experience">Experience (High to Low)</option>
+                    </select>
+                </div>
+
+                <button id="applyFilters" class="apply-btn">Apply Filters</button>
+            </aside>
+
+            <!-- Teachers Grid -->
+            <section class="teachers-section">
+                <div class="section-header">
+                    <h2>Available Teachers</h2>
+                    <span id="teacherCount" class="count-badge">0 teachers</span>
+                </div>
+
+                <div id="teachersGrid" class="teachers-grid">
+                    <!-- Teachers will be dynamically loaded here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Teacher Profile Modal -->
+    <div id="teacherModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="teacherProfile" class="teacher-profile">
+                <!-- Profile content will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
